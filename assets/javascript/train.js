@@ -14,11 +14,9 @@ $(document).ready(function () {
   firebase.initializeApp(firebaseConfig);
 
   var database = firebase.database();
-  let trainNum;
   let minutesLeft;
   let nextTrainMins;
   let nextTrainArrival;
-  let currentTime;
 
   //============================================================================
 
@@ -80,7 +78,7 @@ $(document).ready(function () {
     console.log("The read failed: " + errorObject.code);
   });
 
-
+  let trainNum = 0;
   // submit button, adds new train
   $(".submitB").on("click", function (event) {
 
